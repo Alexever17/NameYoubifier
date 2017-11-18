@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Write your name and see which music comes out!">
+  <meta name="keywords" content="youtube, music, generator, fun, game">
+  <meta name="author" content="Oleksandr Malakhov">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nameyoubifier</title>
+  <link rel="stylesheet" href="master.css">
+</head>
+
+  <body>
+    <h1>NameYoubifier</h1>
+    <h2>Write your name and see which music comes out!</h2>
+    <div class="flex">
+      <input type="text" class="input_box" value="Your name goes here!" id="inputfield">
+      <button id="btn" type="button" onclick="textcheck()">Play on</button>
+    </div>
+    <div class="flex">
+      <iframe id="frame" class="youtube" src="" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <div class="bottom" id="bottom">
+      <p>Something broken? Connect with me at <a href="https://github.com/Alexever17/NameYoubifier">Github</a></p>
+    </div>
+    <script type="text/javascript" src="master.js"></script>
+  </body>
+
+</html>

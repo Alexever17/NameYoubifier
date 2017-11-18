@@ -1,0 +1,86 @@
+body {
+  padding: 0;
+  margin: 0;
+  background-color: #522B72;
+  font-size: 1em;
+}
+
+.bottom {
+  text-align: center;
+  margin-top: 50px;
+  color: #AEC965;
+  display: none;
+}
+
+.bottom,a {
+  color: #AEC965;
+}
+
+.youtube {
+  display: none;
+  width: 50vw;
+  height: 28.1vw;
+}
+
+h1 {
+  color: #AEC965;
+  font-size: 3em;
+  text-shadow: 1px 1px 0px #f3f3f5;
+  text-align: center;
+}
+
+h2 {
+  color: #AEC965;
+  font-size: 2em;
+  text-align: center;
+  text-shadow: 1px 1px 0px #f3f3f5;
+}
+
+div {
+  margin-top: 50px;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+button {
+  padding: 10px;
+  color: white;
+  background-color: #AA9339;
+  font-size: 1.2em;
+  border: 0;
+  box-shadow: 1px 1px 0px #f3f3f5;
+}
+
+button:active {
+  border: 2px solid white;
+}
+
+button:focus {
+  outline:0;
+}
+
+input {
+  padding: 10px;
+  color: white;
+  background-color: #AA9339;
+  font-size: 1.2em;
+  border: 0;
+  box-shadow: 1px 1px 0px #f3f3f5;
+  margin-right: 10px;
+}
+
+input:active {
+  border: 2px solid white;
+}
+
+input:focus {
+  outline:0;
+}
+
+@media only screen and (max-width: 500px) {
+  .youtube {
+    width: 100vw;
+    height: 56.3vw;
+  }
+}
