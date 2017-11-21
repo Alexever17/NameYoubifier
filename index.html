@@ -15,7 +15,9 @@
     <h1>NameYoubifier</h1>
     <h2>Write your name and see which music comes out!</h2>
     <div class="flex">
-      <input type="text" class="input_box" value="Your name goes here!" id="inputfield">
+      <input type="text" class="input_box" value="Your name goes here!" id="inputfield"
+      onfocus="if(this.value == 'Your name goes here!') { this.value = ''; }"
+      onblur="if(this.value == '') { this.value = 'Your name goes here!'; }">
       <button id="btn" type="button" onclick="textcheck()">Play on</button>
     </div>
     <div class="flex">
