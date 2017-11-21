@@ -6,23 +6,9 @@ document.getElementById("inputfield").addEventListener("keyup", function(event) 
     }
 });
 
-var links = [
-"https://www.youtube.com/embed/jy-uToZIfJs",
-"https://www.youtube.com/embed/IPFMpihWxck",
-"https://www.youtube.com/embed/CnT8jmMgKFA",
-"https://www.youtube.com/embed/wVatyQFYx6o",
-"https://www.youtube.com/embed/R319qcVyIOA",
-"https://www.youtube.com/embed/azvzKhX4hL8",
-"https://www.youtube.com/embed/IfGcldZInfM",
-"https://www.youtube.com/embed/8LWjCJWImIQ",
-"https://www.youtube.com/embed/7lgI7lKKfBo",
-"https://www.youtube.com/embed/yjgQ_TmvhQw"
-]
-
 // This function looks if a name was written. If the input wasn't changed, it
-// will guide the user to the input. By a new trigger it will state that input
-// was empty, if it was. At the third trigger without a text change it will
-// close the page.
+// will guide the user to the input. It will also clear the field by the
+// error message from textfilter()
 function textcheck() {
   var text_element = document.getElementById('inputfield');
   var text_value = document.getElementById('inputfield').value;
@@ -32,12 +18,22 @@ function textcheck() {
     text_element.focus();
     return
   }
-  if (text_value == "") {
-    text_element.value = "This was empty";
+  if (text_value == "Please use only text") {
+    text_element.value = "";
+    text_element.focus();
     return
   }
-  if (text_value == "This was empty") {
-    window.close();
+  textfilter()
+}
+
+// This functions searches for any non alphabetical characters in the input and
+// returns an error if so.
+function textfilter() {
+  var text_value = document.getElementById('inputfield').value;
+
+  if (new RegExp(/[^A-z]/).test(text_value)) {
+    document.getElementById('inputfield').value = "Please use only text";
+    return
   }
   id_creator()
 }
@@ -54,7 +50,7 @@ function id_creator() {
     name_id = name_id + string.charCodeAt(i);
   }
   name_id = name_id / 3.14159265358 * 10000;
-  name_id = Math.floor((name_id - Math.floor(name_id))*10);
+  name_id = Math.floor((name_id - Math.floor(name_id))*100);
   framechanger(name_id)
 }
 
@@ -65,3 +61,107 @@ function framechanger(name_id) {
   document.getElementById('frame').style.display = 'block';
   document.getElementById('bottom').style.display = 'block';
 }
+
+// This array is on the bottom because it will be quite long
+var links = [
+"https://www.youtube.com/embed/jy-uToZIfJs",
+"https://www.youtube.com/embed/IPFMpihWxck",
+"https://www.youtube.com/embed/CnT8jmMgKFA",
+"https://www.youtube.com/embed/wVatyQFYx6o",
+"https://www.youtube.com/embed/R319qcVyIOA",
+"https://www.youtube.com/embed/azvzKhX4hL8",
+"https://www.youtube.com/embed/IfGcldZInfM",
+"https://www.youtube.com/embed/8LWjCJWImIQ",
+"https://www.youtube.com/embed/7lgI7lKKfBo",
+"https://www.youtube.com/embed/yjgQ_TmvhQw",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+"",
+]
